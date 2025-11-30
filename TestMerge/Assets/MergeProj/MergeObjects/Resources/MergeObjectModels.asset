@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab2f08effbed4c9d98d1ff330e105b36, type: 3}
+  m_Name: MergeObjectModels
+  m_EditorClassIdentifier: 
+  mergeObjectModels:
+  - Level: 1
+    Sprite: {fileID: 2641698482785147981, guid: 6226e67ac0cdb07439a6b1cfe3c5b0b1, type: 3}
+  - Level: 2
+    Sprite: {fileID: 7175521830830924091, guid: 3900e70717f1f2649b442f16826b5a25, type: 3}
+  - Level: 3
+    Sprite: {fileID: -556663896244417668, guid: 38f0d1936ee83304da0927739bf2230e, type: 3}
+  - Level: 4
+    Sprite: {fileID: -26329759613171845, guid: 19784928d11a05c4a957ccd2e5184940, type: 3}
+  - Level: 5
+    Sprite: {fileID: 538513131370383185, guid: b9ef7a0e89bc1b944824dda870cc3068, type: 3}
+  - Level: 6
+    Sprite: {fileID: -2524709661943058933, guid: a080df5b457601244b80eb88babd25a8, type: 3}
+  - Level: 7
+    Sprite: {fileID: -9005769944389503070, guid: cde52bd6d43869e43a8bd777c61adae9, type: 3}
+  - Level: 8
+    Sprite: {fileID: -5388035845342605213, guid: 1b534adc41e90844899689d9e99eb210, type: 3}
+  - Level: 9
+    Sprite: {fileID: -2303288412884254021, guid: cd0fc91f0c739cc4398c70e0ce45e9e2, type: 3}
+  - Level: 10
+    Sprite: {fileID: -4021081617144275761, guid: 3f2d5e0ed854140499ad338491ed6803, type: 3}
