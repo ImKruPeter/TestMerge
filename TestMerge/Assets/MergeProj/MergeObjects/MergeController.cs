@@ -1,6 +1,7 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using MergeProj.Field;
 using MergeProj.Input;
 using UnityEngine;
 
@@ -14,7 +15,7 @@ namespace MergeProj.MergeObjects
         
         private CancellationTokenSource _spawnCancellationTokenSource;
         
-        private float _spawnIntervalSec = 2f;
+        private float _spawnIntervalSec = 1f;
         
         public MergeController(
             MergeObjectModels mergeObjectModels,
@@ -36,6 +37,8 @@ namespace MergeProj.MergeObjects
             
             _spawnCancellationTokenSource = new CancellationTokenSource();
             _ = RunSpawner(_spawnCancellationTokenSource.Token);
+            
+            _inputController.MergeEventInvoked += MergeObjects;
         }
 
         public void SpawnMergeObject()
@@ -73,9 +76,15 @@ namespace MergeProj.MergeObjects
             { }
         }
 
-        private void MergeObjects()
+        private void MergeObjects(MergeObjectView objectToMerge, MergeObjectView objectMergeIn)
         {
-            
+            if (objectToMerge.Level == objectMergeIn.Level)
+            {
+                objectToMerge.transform.parent.GetComponent<ObjectSlotView>().SetAvailable(true);
+                objectToMerge.DestroyObject();
+                objectMergeIn.LevelUp();
+                objectMergeIn.ObjectSpriteRenderer.sprite = _mergeObjectModels.GetMergeObjectModel(objectMergeIn.Level).Sprite;
+            }
         }
     }
 }

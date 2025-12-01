@@ -7,7 +7,7 @@ namespace MergeProj.Input
         public override void InstallBindings()
         {
             Container.BindInterfacesAndSelfTo<InputHandler>().AsSingle().NonLazy();
-            Container.Bind<InputController>().AsSingle().NonLazy();
+            Container.BindInterfacesAndSelfTo<InputController>().AsSingle().NonLazy();
             Container.Bind<InputManager>().AsSingle().NonLazy();
         }
     }

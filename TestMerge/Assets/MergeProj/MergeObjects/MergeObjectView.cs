@@ -5,8 +5,10 @@ namespace MergeProj.MergeObjects
     public class MergeObjectView : MonoBehaviour
     {
         public SpriteRenderer ObjectSpriteRenderer => objectSpriteRenderer;
+        public Collider2D ObjectCollider2D => objectCollider2D;
         
         [SerializeField] private SpriteRenderer objectSpriteRenderer;
+        [SerializeField] private Collider2D objectCollider2D;
         
         public int Level => _level;
 
